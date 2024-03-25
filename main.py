@@ -6,3 +6,5 @@ if __name__ == '__main__':
     print("Текущая дата:", datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
     calculate_salary()
     get_employees()
+
+
