@@ -71,7 +71,7 @@ def test_check_triangle(sides, expected_result):
 import requests
 import pytest
 
-# Необходимо заменить 'your_oauth_token' на ваш действительный OAuth токен.
+
 TOKEN = 'https://oauth.yandex.ru/authorize?response_type=code&client_id=<YOUR_CLIENT_ID>&redirect_uri=<YOUR_REDIRECT_URI>&scope=disk:write'
 HEADERS = {'Authorization': f'OAuth {TOKEN}'}
 API_BASE_URL = 'https://cloud-api.yandex.net/v1/disk/resources'
@@ -89,7 +89,7 @@ def check_folder_exists(path):
 ])
 def test_create_folder(folder_name):
     response = create_folder(folder_name)
-    assert response.status_code == 201  # для успешного создания папки статус должен быть 201
+    assert response.status_code == 201
 
     assert check_folder_exists(folder_name)
 
